@@ -93,7 +93,8 @@ const PROJECT_ITEMS = [
     location: "Logistics Platform",
     type: "Fullstack Project",
     tech: ["MERN Stack", "Tailwind CSS", "Sass", "Redux Toolkit", "Socket.io"],
-    videoUrl: `/projects/videos/Smartdeliverydemo.mp4`,
+    // videoUrl: `/projects/videos/Smartdeliverydemo.mp4`,
+    videoUrl: `${import.meta.env.BASE_URL}projects/videos/Smartdeliverydemo.mp4`,
     points: [
       "Developed an advanced logistics management system equipped with <strong class='text-blue-500 font-semibold'>real-time order tracking</strong>.",
       "Built an administrator analytics dashboard designed to optimize delivery performance and routing workflows.",
