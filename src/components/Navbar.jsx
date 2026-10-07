@@ -7,12 +7,12 @@ const navLinks = [
   { name: "Home", href: "#home" },
   { name: "Education", href: "#education" },
   { name: "Skills", href: "#skills" },
-  { name: "Experience", href: "#projects" },
+  { name: "Experience", href: "#experience" },
   { name: "Connect", href: "#connect" },
 ];
 
 export default function Navbar() {
-  // Thabbet houni: nesta3mlou "toggle" 5ater el Context mte3ek fih "toggle"
+  // use Theme to get the current theme and toggle function
   const { theme, toggle } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -70,8 +70,8 @@ export default function Navbar() {
             : "bg-transparent py-5 border-transparent"
         }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
-        {/* --- LOGO SECTION (El Motion elli 3jebek) --- */}
+      <div className="max-w-8xl mx-auto flex justify-between items-center px-6">
+        {/* --- LOGO SECTION  --- */}
         <a
           href="#home"
           onClick={(e) => scrollToSection(e, "#home")}
@@ -96,7 +96,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           <ul className="flex items-center gap-2">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.replace("#", "");
@@ -137,7 +137,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Controls */}
-        <div className="flex md:hidden items-center gap-4 z-[60]">
+        <div className="flex lg:hidden items-center gap-4 z-[60]">
           <ThemeToggleButton isDark={isDark} toggle={toggle} />
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -155,7 +155,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-0 w-full h-screen z-[-1] md:hidden"
+            className="fixed inset-0 top-0 w-full h-screen z-[-1] lg:hidden"
           >
             {/* Background Blur */}
             <div

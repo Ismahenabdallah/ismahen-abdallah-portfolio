@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "../context/Theme/ThemeContext";
 import { GraduationCap, Calendar, BookOpen } from "lucide-react";
 import { EDUCATION_DATA } from "../data/portfolioData";
+import SeparatorWithoutLabel from "../components/SeperatorWithoutLabel";
 
 const Education = () => {
   const { theme } = useTheme() || { theme: "dark" };
@@ -14,7 +15,7 @@ const Education = () => {
         isDark ? "bg-[#080808] text-white" : "bg-slate-50 text-slate-900"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-5 md:px-8">
+      <div className="max-w-8xl mx-auto px-5 md:px-8">
         {/* Title Section */}
         <div className="text-center mb-6 md:mb-10">
           <motion.h1
@@ -95,6 +96,7 @@ const Education = () => {
           ))}
         </div>
       </div>
+      <SeparatorWithoutLabel />
     </section>
   );
 };

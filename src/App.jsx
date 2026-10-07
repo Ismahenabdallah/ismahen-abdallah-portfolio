@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="bg-[#050505] min-h-screen">
+      <div className=" min-h-screen">
         <AnimatePresence mode="wait">
           {isLoading ? (
             <LoadingPage key="loader" />
@@ -50,7 +50,7 @@ const App = () => {
                 <section id="skills">
                   <Skills />
                 </section>
-                <section id="projects">
+                <section id="Experience">
                   <Work />
                 </section>
                 <section id="connect">
